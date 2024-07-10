@@ -1,26 +1,3 @@
-'''
-cron: 30 11 * * *
-new Env('望潮阅读抽奖');
-问题反馈联系请联系：https://t.me/bwersgt
-群组：https://t.me/yangmaoxz
-频道地址：https://t.me/ymxzpd
-
-使用方法：
-1.打开app，点击阅读有礼
-2.抓包https://xmt.taizhou.com.cn/prod-api/user-read/app/login接口的id,sessionId,deviceId参数
-3.配置文件添加
-单账户：export wcread="[ {'name': 'xxx','aid': 'id', 'sid': 'sessionId', 'deviceId':'deviceId'}]"
-多账户：export wcread="[
-{'name': 'xxx','aid': 'xxxx', 'sid': 'xxxx', 'deviceId':'xxxx'},
-{'name': 'xxx','aid': 'xxxx', 'sid': 'xxxx', 'deviceId':'xxxx'}
-]"
-参数说明：
-bz:备注名随意填写
-aid:2步骤中的id参数
-sid:2步骤中的sessionId参数
-deviceId:2步骤中的deviceId参数
-'''
-
 import lzma,base64
 DuvdsGnLFeHjXIhaWCPNozUgBTMiptOVElJRkYqwfAcQmSxbKy=base64.b64decode
 DuvdsGnLFeHjXIhaWCPNozUgBTMiptOVElJRkYqwfAcQmSxbKr=lzma.decompress
