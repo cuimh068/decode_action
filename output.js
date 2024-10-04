@@ -1,4 +1,4 @@
-//Fri Oct 04 2024 14:54:47 GMT+0000 (Coordinated Universal Time)
+//Fri Oct 04 2024 15:00:10 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const _0x2b8185 = function () {
@@ -7,10 +7,12 @@ const _0x2b8185 = function () {
     const _0x5b1d98 = _0x2fac98 ? function () {
       if (_0x5aeaa2) {
         const _0x5593d4 = _0x5aeaa2.apply(_0x240655, arguments);
-        return _0x5aeaa2 = null, _0x5593d4;
+        _0x5aeaa2 = null;
+        return _0x5593d4;
       }
     } : function () {};
-    return _0x2fac98 = false, _0x5b1d98;
+    _0x2fac98 = false;
+    return _0x5b1d98;
   };
 }();
 (function () {
@@ -84,8 +86,12 @@ function _0x310e39() {
   return "Mozilla/5.0 (iPhone; CPU iPhone OS " + _0x5bf1bb + " like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1";
 }
 !(async () => {
-  if (!(await _0x5823bb())) return;
-  _0xdd376c.userList.length > 0 && (await _0x212835());
+  if (!(await _0x5823bb())) {
+    return;
+  }
+  if (_0xdd376c.userList.length > 0) {
+    await _0x212835();
+  }
   await _0xdd376c.SendMsg(_0x1697e0);
 })().catch(_0x4908b9 => console.log(_0x4908b9)).finally(() => _0xdd376c.done());
 async function _0x5823bb() {
@@ -96,23 +102,32 @@ async function _0x5823bb() {
       _0x52c2e7 = _0x3b8420;
       break;
     }
-    for (let _0x1344d3 of _0x25848e.split(_0x52c2e7)) _0x1344d3 && _0xdd376c.userList.push(new _0x3fd251(_0x1344d3));
+    for (let _0x1344d3 of _0x25848e.split(_0x52c2e7)) if (_0x1344d3) {
+      _0xdd376c.userList.push(new _0x3fd251(_0x1344d3));
+    }
   } else {
     console.log("未找到CK");
     return;
   }
-  return console.log("共找到" + _0xdd376c.userList.length + "个账号"), true;
+  console.log("共找到" + _0xdd376c.userList.length + "个账号");
+  return true;
 }
 function _0x34553e(_0x3d2fad, _0x506920 = null) {
-  return _0x506920 = _0x3d2fad.method ? _0x3d2fad.method.toLowerCase() : _0x3d2fad.body ? "post" : "get", new Promise(_0x3d904c => {
+  _0x3d2fad.method ? _0x506920 = _0x3d2fad.method.toLowerCase() : _0x3d2fad.body ? _0x506920 = "post" : _0x506920 = "get";
+  return new Promise(_0x3d904c => {
     _0xdd376c[_0x506920](_0x3d2fad, (_0x8c510, _0x32016, _0x46b051) => {
-      if (_0x8c510) console.log(_0x506920 + "请求失败"), _0xdd376c.logErr(_0x8c510);else {
+      if (_0x8c510) {
+        console.log(_0x506920 + "请求失败");
+        _0xdd376c.logErr(_0x8c510);
+      } else {
         if (_0x46b051) {
           try {
             _0x46b051 = JSON.parse(_0x46b051);
           } catch (_0x12716c) {}
           _0x3d904c(_0x46b051);
-        } else console.log("请求api返回数据为空，请检查自身原因");
+        } else {
+          console.log("请求api返回数据为空，请检查自身原因");
+        }
       }
       _0x3d904c();
     });
@@ -153,7 +168,9 @@ async function _0x5f8626() {
         break;
       }
     }
-    _0x4e7bf8 && _0xdd376c.DoubleLog(_0x4e7bf8);
+    if (_0x4e7bf8) {
+      _0xdd376c.DoubleLog(_0x4e7bf8);
+    }
   } catch (_0x501bc7) {
     console.log(_0x501bc7);
   }
@@ -164,11 +181,12 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
       this.env = _0x451978;
     }
     ["send"](_0x439262, _0x3b18b3 = "GET") {
-      _0x439262 = "string" == typeof _0x439262 ? {
+      "string" == typeof _0x439262 ? _0x439262 = {
         "url": _0x439262
-      } : _0x439262;
+      } : _0x439262 = _0x439262;
       let _0x354828 = this.get;
-      return "POST" === _0x3b18b3 && (_0x354828 = this.post), new Promise((_0x312286, _0x190334) => {
+      "POST" === _0x3b18b3 && (_0x354828 = this.post);
+      return new Promise((_0x312286, _0x190334) => {
         _0x354828.call(this, _0x439262, (_0x4ee04e, _0x413d8a, _0x2e06b5) => {
           _0x4ee04e ? _0x190334(_0x4ee04e) : _0x312286(_0x413d8a);
         });
@@ -199,7 +217,7 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
       this.log("", "🔔" + this.name + ",开始!");
     }
     ["getEnv"]() {
-      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : void 0;
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : 0;
     }
     ["isNode"]() {
       return "Node.js" === this.getEnv();
@@ -236,9 +254,11 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
     ["getjson"](_0x5750de, _0x51af57) {
       let _0x317625 = _0x51af57;
       const _0x35e23a = this.getdata(_0x5750de);
-      if (_0x35e23a) try {
-        _0x317625 = JSON.parse(this.getdata(_0x5750de));
-      } catch {}
+      if (_0x35e23a) {
+        try {
+          _0x317625 = JSON.parse(this.getdata(_0x5750de));
+        } catch {}
+      }
       return _0x317625;
     }
     ["setjson"](_0x33c9a1, _0x1333d3) {
@@ -258,10 +278,10 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
     ["runScript"](_0x13cb8a, _0x3a3100) {
       return new Promise(_0x158c95 => {
         let _0x386309 = this.getdata("@chavy_boxjs_userCfgs.httpapi");
-        _0x386309 = _0x386309 ? _0x386309.replace(/\n/g, "").trim() : _0x386309;
+        _0x386309 ? _0x386309 = _0x386309.replace(/\n/g, "").trim() : _0x386309 = _0x386309;
         let _0x5cfcf1 = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
-        _0x5cfcf1 = _0x5cfcf1 ? 1 * _0x5cfcf1 : 20;
-        _0x5cfcf1 = _0x3a3100 && _0x3a3100.timeout ? _0x3a3100.timeout : _0x5cfcf1;
+        _0x5cfcf1 ? _0x5cfcf1 = 1 * _0x5cfcf1 : _0x5cfcf1 = 20;
+        _0x3a3100 && _0x3a3100.timeout ? _0x5cfcf1 = _0x3a3100.timeout : _0x5cfcf1 = _0x5cfcf1;
         const [_0x408c0a, _0x185e1c] = _0x386309.split("@"),
           _0xd4f552 = {
             "url": "http://" + _0x185e1c + "/v1/scripting/evaluate",
@@ -280,29 +300,29 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
       }).catch(_0x2f6325 => this.logErr(_0x2f6325));
     }
     ["loaddata"]() {
-      if (!this.isNode()) return {};
-      {
-        this.fs = this.fs ? this.fs : require("fs");
-        this.path = this.path ? this.path : require("path");
-        const _0x107fee = this.path.resolve(this.dataFile),
-          _0xa5b883 = this.path.resolve(process.cwd(), this.dataFile),
-          _0x8ef5d0 = this.fs.existsSync(_0x107fee),
-          _0x518e8a = !_0x8ef5d0 && this.fs.existsSync(_0xa5b883);
-        if (!_0x8ef5d0 && !_0x518e8a) return {};
-        {
-          const _0x3ca897 = _0x8ef5d0 ? _0x107fee : _0xa5b883;
-          try {
-            return JSON.parse(this.fs.readFileSync(_0x3ca897));
-          } catch (_0x3de460) {
-            return {};
-          }
-        }
+      if (!this.isNode()) {
+        return {};
+      }
+      this.fs ? this.fs = this.fs : this.fs = require("fs");
+      this.path ? this.path = this.path : this.path = require("path");
+      const _0x107fee = this.path.resolve(this.dataFile),
+        _0xa5b883 = this.path.resolve(process.cwd(), this.dataFile),
+        _0x8ef5d0 = this.fs.existsSync(_0x107fee),
+        _0x518e8a = !_0x8ef5d0 && this.fs.existsSync(_0xa5b883);
+      if (!_0x8ef5d0 && !_0x518e8a) {
+        return {};
+      }
+      const _0x3ca897 = _0x8ef5d0 ? _0x107fee : _0xa5b883;
+      try {
+        return JSON.parse(this.fs.readFileSync(_0x3ca897));
+      } catch (_0x3de460) {
+        return {};
       }
     }
     ["writedata"]() {
       if (this.isNode()) {
-        this.fs = this.fs ? this.fs : require("fs");
-        this.path = this.path ? this.path : require("path");
+        this.fs ? this.fs = this.fs : this.fs = require("fs");
+        this.path ? this.path = this.path : this.path = require("path");
         const _0x4b927f = this.path.resolve(this.dataFile),
           _0x2b327f = this.path.resolve(process.cwd(), this.dataFile),
           _0x355579 = this.fs.existsSync(_0x4b927f),
@@ -314,22 +334,26 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
     ["lodash_get"](_0x34723b, _0x26a601, _0x3e762a) {
       const _0xbb435f = _0x26a601.replace(/\[(\d+)\]/g, ".$1").split(".");
       let _0xcc1568 = _0x34723b;
-      for (const _0x501ca0 of _0xbb435f) if (_0xcc1568 = Object(_0xcc1568)[_0x501ca0], void 0 === _0xcc1568) return _0x3e762a;
+      for (const _0x501ca0 of _0xbb435f) if (_0xcc1568 = Object(_0xcc1568)[_0x501ca0], 0 === _0xcc1568) {
+        return _0x3e762a;
+      }
       return _0xcc1568;
     }
     ["lodash_set"](_0x4a083f, _0x3255fd, _0x5deb1a) {
-      return Object(_0x4a083f) !== _0x4a083f ? _0x4a083f : (Array.isArray(_0x3255fd) || (_0x3255fd = _0x3255fd.toString().match(/[^.[\]]+/g) || []), _0x3255fd.slice(0, -1).reduce((_0x3936e6, _0x780ef1, _0x54d871) => Object(_0x3936e6[_0x780ef1]) === _0x3936e6[_0x780ef1] ? _0x3936e6[_0x780ef1] : _0x3936e6[_0x780ef1] = Math.abs(_0x3255fd[_0x54d871 + 1]) >> 0 == +_0x3255fd[_0x54d871 + 1] ? [] : {}, _0x4a083f)[_0x3255fd[_0x3255fd.length - 1]] = _0x5deb1a, _0x4a083f);
+      return Object(_0x4a083f) !== _0x4a083f ? _0x4a083f : (Array.isArray(_0x3255fd) || (_0x3255fd = _0x3255fd.toString().match(/[^.[\]]+/g) || []), _0x3255fd.slice(0, -1).reduce((_0x3936e6, _0x780ef1, _0x54d871) => Object(_0x3936e6[_0x780ef1]) === _0x3936e6[_0x780ef1] ? _0x3936e6[_0x780ef1] : Math.abs(_0x3255fd[_0x54d871 + 1]) >> 0 == +_0x3255fd[_0x54d871 + 1] ? _0x3936e6[_0x780ef1] = [] : _0x3936e6[_0x780ef1] = {}, _0x4a083f)[_0x3255fd[_0x3255fd.length - 1]] = _0x5deb1a, _0x4a083f);
     }
     ["getdata"](_0x478e0d) {
       let _0x134575 = this.getval(_0x478e0d);
       if (/^@/.test(_0x478e0d)) {
         const [, _0x384b6b, _0x140a62] = /^@(.*?)\.(.*?)$/.exec(_0x478e0d),
           _0x50c70e = _0x384b6b ? this.getval(_0x384b6b) : "";
-        if (_0x50c70e) try {
-          const _0x22203e = JSON.parse(_0x50c70e);
-          _0x134575 = _0x22203e ? this.lodash_get(_0x22203e, _0x140a62, "") : _0x134575;
-        } catch (_0x2c07b9) {
-          _0x134575 = "";
+        if (_0x50c70e) {
+          try {
+            const _0x22203e = JSON.parse(_0x50c70e);
+            _0x22203e ? _0x134575 = this.lodash_get(_0x22203e, _0x140a62, "") : _0x134575 = _0x134575;
+          } catch (_0x2c07b9) {
+            _0x134575 = "";
+          }
         }
       }
       return _0x134575;
@@ -349,179 +373,246 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
           this.lodash_set(_0x531a63, _0xb5549a, _0xafed80);
           _0x2be4ee = this.setval(JSON.stringify(_0x531a63), _0x329b98);
         }
-      } else _0x2be4ee = this.setval(_0xafed80, _0x2c809c);
+      } else {
+        _0x2be4ee = this.setval(_0xafed80, _0x2c809c);
+      }
       return _0x2be4ee;
     }
     ["getval"](_0x3a5c5a) {
       switch (this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
-          return $persistentStore.read(_0x3a5c5a);
+          {
+            return $persistentStore.read(_0x3a5c5a);
+          }
         case "Quantumult X":
-          return $prefs.valueForKey(_0x3a5c5a);
+          {
+            return $prefs.valueForKey(_0x3a5c5a);
+          }
         case "Node.js":
-          return this.data = this.loaddata(), this.data[_0x3a5c5a];
+          {
+            this.data = this.loaddata();
+            return this.data[_0x3a5c5a];
+          }
         default:
-          return this.data && this.data[_0x3a5c5a] || null;
+          {
+            return this.data && this.data[_0x3a5c5a] || null;
+          }
       }
     }
     ["setval"](_0x254cf4, _0x27f77a) {
       switch (this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
-          return $persistentStore.write(_0x254cf4, _0x27f77a);
+          {
+            return $persistentStore.write(_0x254cf4, _0x27f77a);
+          }
         case "Quantumult X":
-          return $prefs.setValueForKey(_0x254cf4, _0x27f77a);
+          {
+            return $prefs.setValueForKey(_0x254cf4, _0x27f77a);
+          }
         case "Node.js":
-          return this.data = this.loaddata(), this.data[_0x27f77a] = _0x254cf4, this.writedata(), !0;
+          {
+            this.data = this.loaddata();
+            this.data[_0x27f77a] = _0x254cf4;
+            this.writedata();
+            return !0;
+          }
         default:
-          return this.data && this.data[_0x27f77a] || null;
+          {
+            return this.data && this.data[_0x27f77a] || null;
+          }
       }
     }
     ["initGotEnv"](_0x53e2d1) {
-      this.got = this.got ? this.got : require("got");
-      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
-      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
-      _0x53e2d1 && (_0x53e2d1.headers = _0x53e2d1.headers ? _0x53e2d1.headers : {}, void 0 === _0x53e2d1.headers.Cookie && void 0 === _0x53e2d1.cookieJar && (_0x53e2d1.cookieJar = this.ckjar));
+      this.got ? this.got = this.got : this.got = require("got");
+      this.cktough ? this.cktough = this.cktough : this.cktough = require("tough-cookie");
+      this.ckjar ? this.ckjar = this.ckjar : this.ckjar = new this.cktough.CookieJar();
+      if (_0x53e2d1) {
+        _0x53e2d1.headers ? _0x53e2d1.headers = _0x53e2d1.headers : _0x53e2d1.headers = {};
+        0 === _0x53e2d1.headers.Cookie && 0 === _0x53e2d1.cookieJar && (_0x53e2d1.cookieJar = this.ckjar);
+      }
     }
     ["get"](_0xf0ac3a, _0x34ac5e = () => {}) {
       switch (_0xf0ac3a.headers && (delete _0xf0ac3a.headers["Content-Type"], delete _0xf0ac3a.headers["Content-Length"], delete _0xf0ac3a.headers["content-type"], delete _0xf0ac3a.headers["content-length"]), this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
+          {}
         default:
-          this.isSurge() && this.isNeedRewrite && (_0xf0ac3a.headers = _0xf0ac3a.headers || {}, Object.assign(_0xf0ac3a.headers, {
-            "X-Surge-Skip-Scripting": !1
-          })), $httpClient.get(_0xf0ac3a, (_0x129cf0, _0x2f2076, _0x8104bf) => {
-            !_0x129cf0 && _0x2f2076 && (_0x2f2076.body = _0x8104bf, _0x2f2076.statusCode = _0x2f2076.status ? _0x2f2076.status : _0x2f2076.statusCode, _0x2f2076.status = _0x2f2076.statusCode);
-            _0x34ac5e(_0x129cf0, _0x2f2076, _0x8104bf);
-          });
-          break;
-        case "Quantumult X":
-          this.isNeedRewrite && (_0xf0ac3a.opts = _0xf0ac3a.opts || {}, Object.assign(_0xf0ac3a.opts, {
-            "hints": !1
-          })), $task.fetch(_0xf0ac3a).then(_0x3afd55 => {
-            const {
-              statusCode: _0x46eed7,
-              statusCode: _0x2830fe,
-              headers: _0x4f1ddd,
-              body: _0x4fe281,
-              bodyBytes: _0x498e3a
-            } = _0x3afd55;
-            _0x34ac5e(null, {
-              "status": _0x46eed7,
-              "statusCode": _0x2830fe,
-              "headers": _0x4f1ddd,
-              "body": _0x4fe281,
-              "bodyBytes": _0x498e3a
-            }, _0x4fe281, _0x498e3a);
-          }, _0x256d12 => _0x34ac5e(_0x256d12 && _0x256d12.error || "UndefinedError"));
-          break;
-        case "Node.js":
-          let _0x29674b = require("iconv-lite");
-          this.initGotEnv(_0xf0ac3a), this.got(_0xf0ac3a).on("redirect", (_0x2037be, _0x126d31) => {
-            try {
-              if (_0x2037be.headers["set-cookie"]) {
-                const _0xf43d8c = _0x2037be.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
-                _0xf43d8c && this.ckjar.setCookieSync(_0xf43d8c, null);
-                _0x126d31.cookieJar = this.ckjar;
+          {
+            this.isSurge() && this.isNeedRewrite && (_0xf0ac3a.headers = _0xf0ac3a.headers || {}, Object.assign(_0xf0ac3a.headers, {
+              "X-Surge-Skip-Scripting": !1
+            }));
+            $httpClient.get(_0xf0ac3a, (_0x129cf0, _0x2f2076, _0x8104bf) => {
+              if (!_0x129cf0 && _0x2f2076) {
+                _0x2f2076.body = _0x8104bf;
+                _0x2f2076.status ? _0x2f2076.statusCode = _0x2f2076.status : _0x2f2076.statusCode = _0x2f2076.statusCode;
+                _0x2f2076.status = _0x2f2076.statusCode;
               }
-            } catch (_0x336b3f) {
-              this.logErr(_0x336b3f);
-            }
-          }).then(_0x33da5f => {
-            const {
-                statusCode: _0x508c5b,
-                statusCode: _0x5cb730,
-                headers: _0x5d7cec,
-                rawBody: _0x2a3c5f
-              } = _0x33da5f,
-              _0x35e780 = _0x29674b.decode(_0x2a3c5f, this.encoding);
-            _0x34ac5e(null, {
-              "status": _0x508c5b,
-              "statusCode": _0x5cb730,
-              "headers": _0x5d7cec,
-              "rawBody": _0x2a3c5f,
-              "body": _0x35e780
-            }, _0x35e780);
-          }, _0x564db0 => {
-            const {
-              message: _0x179a55,
-              response: _0x14a094
-            } = _0x564db0;
-            _0x34ac5e(_0x179a55, _0x14a094, _0x14a094 && _0x29674b.decode(_0x14a094.rawBody, this.encoding));
-          });
+              _0x34ac5e(_0x129cf0, _0x2f2076, _0x8104bf);
+            });
+            break;
+          }
+        case "Quantumult X":
+          {
+            this.isNeedRewrite && (_0xf0ac3a.opts = _0xf0ac3a.opts || {}, Object.assign(_0xf0ac3a.opts, {
+              "hints": !1
+            }));
+            $task.fetch(_0xf0ac3a).then(_0x3afd55 => {
+              const {
+                statusCode: _0x46eed7,
+                statusCode: _0x2830fe,
+                headers: _0x4f1ddd,
+                body: _0x4fe281,
+                bodyBytes: _0x498e3a
+              } = _0x3afd55;
+              _0x34ac5e(null, {
+                "status": _0x46eed7,
+                "statusCode": _0x2830fe,
+                "headers": _0x4f1ddd,
+                "body": _0x4fe281,
+                "bodyBytes": _0x498e3a
+              }, _0x4fe281, _0x498e3a);
+            }, _0x256d12 => _0x34ac5e(_0x256d12 && _0x256d12.error || "UndefinedError"));
+            break;
+          }
+        case "Node.js":
+          {
+            let _0x29674b = require("iconv-lite");
+            this.initGotEnv(_0xf0ac3a);
+            this.got(_0xf0ac3a).on("redirect", (_0x2037be, _0x126d31) => {
+              try {
+                if (_0x2037be.headers["set-cookie"]) {
+                  const _0xf43d8c = _0x2037be.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                  if (_0xf43d8c) {
+                    this.ckjar.setCookieSync(_0xf43d8c, null);
+                  }
+                  _0x126d31.cookieJar = this.ckjar;
+                }
+              } catch (_0x336b3f) {
+                this.logErr(_0x336b3f);
+              }
+            }).then(_0x33da5f => {
+              const {
+                  statusCode: _0x508c5b,
+                  statusCode: _0x5cb730,
+                  headers: _0x5d7cec,
+                  rawBody: _0x2a3c5f
+                } = _0x33da5f,
+                _0x35e780 = _0x29674b.decode(_0x2a3c5f, this.encoding);
+              _0x34ac5e(null, {
+                "status": _0x508c5b,
+                "statusCode": _0x5cb730,
+                "headers": _0x5d7cec,
+                "rawBody": _0x2a3c5f,
+                "body": _0x35e780
+              }, _0x35e780);
+            }, _0x564db0 => {
+              const {
+                message: _0x179a55,
+                response: _0x14a094
+              } = _0x564db0;
+              _0x34ac5e(_0x179a55, _0x14a094, _0x14a094 && _0x29674b.decode(_0x14a094.rawBody, this.encoding));
+            });
+          }
       }
     }
     ["post"](_0x3d406f, _0x1fb9c6 = () => {}) {
       const _0x39ae3d = _0x3d406f.method ? _0x3d406f.method.toLocaleLowerCase() : "post";
       switch (_0x3d406f.body && _0x3d406f.headers && !_0x3d406f.headers["Content-Type"] && !_0x3d406f.headers["content-type"] && (_0x3d406f.headers["content-type"] = "application/x-www-form-urlencoded"), _0x3d406f.headers && (delete _0x3d406f.headers["Content-Length"], delete _0x3d406f.headers["content-length"]), this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
+          {}
         default:
-          this.isSurge() && this.isNeedRewrite && (_0x3d406f.headers = _0x3d406f.headers || {}, Object.assign(_0x3d406f.headers, {
-            "X-Surge-Skip-Scripting": !1
-          })), $httpClient[_0x39ae3d](_0x3d406f, (_0x2bf0a1, _0x37565c, _0x2b1b79) => {
-            !_0x2bf0a1 && _0x37565c && (_0x37565c.body = _0x2b1b79, _0x37565c.statusCode = _0x37565c.status ? _0x37565c.status : _0x37565c.statusCode, _0x37565c.status = _0x37565c.statusCode);
-            _0x1fb9c6(_0x2bf0a1, _0x37565c, _0x2b1b79);
-          });
-          break;
+          {
+            this.isSurge() && this.isNeedRewrite && (_0x3d406f.headers = _0x3d406f.headers || {}, Object.assign(_0x3d406f.headers, {
+              "X-Surge-Skip-Scripting": !1
+            }));
+            $httpClient[_0x39ae3d](_0x3d406f, (_0x2bf0a1, _0x37565c, _0x2b1b79) => {
+              if (!_0x2bf0a1 && _0x37565c) {
+                _0x37565c.body = _0x2b1b79;
+                _0x37565c.status ? _0x37565c.statusCode = _0x37565c.status : _0x37565c.statusCode = _0x37565c.statusCode;
+                _0x37565c.status = _0x37565c.statusCode;
+              }
+              _0x1fb9c6(_0x2bf0a1, _0x37565c, _0x2b1b79);
+            });
+            break;
+          }
         case "Quantumult X":
-          _0x3d406f.method = _0x39ae3d, this.isNeedRewrite && (_0x3d406f.opts = _0x3d406f.opts || {}, Object.assign(_0x3d406f.opts, {
-            "hints": !1
-          })), $task.fetch(_0x3d406f).then(_0x488b38 => {
-            const {
-              statusCode: _0x1e1c9b,
-              statusCode: _0x10a4fd,
-              headers: _0x58c940,
-              body: _0x3fc24a,
-              bodyBytes: _0x38566f
-            } = _0x488b38;
-            _0x1fb9c6(null, {
-              "status": _0x1e1c9b,
-              "statusCode": _0x10a4fd,
-              "headers": _0x58c940,
-              "body": _0x3fc24a,
-              "bodyBytes": _0x38566f
-            }, _0x3fc24a, _0x38566f);
-          }, _0x5d1c16 => _0x1fb9c6(_0x5d1c16 && _0x5d1c16.error || "UndefinedError"));
-          break;
+          {
+            _0x3d406f.method = _0x39ae3d;
+            this.isNeedRewrite && (_0x3d406f.opts = _0x3d406f.opts || {}, Object.assign(_0x3d406f.opts, {
+              "hints": !1
+            }));
+            $task.fetch(_0x3d406f).then(_0x488b38 => {
+              const {
+                statusCode: _0x1e1c9b,
+                statusCode: _0x10a4fd,
+                headers: _0x58c940,
+                body: _0x3fc24a,
+                bodyBytes: _0x38566f
+              } = _0x488b38;
+              _0x1fb9c6(null, {
+                "status": _0x1e1c9b,
+                "statusCode": _0x10a4fd,
+                "headers": _0x58c940,
+                "body": _0x3fc24a,
+                "bodyBytes": _0x38566f
+              }, _0x3fc24a, _0x38566f);
+            }, _0x5d1c16 => _0x1fb9c6(_0x5d1c16 && _0x5d1c16.error || "UndefinedError"));
+            break;
+          }
         case "Node.js":
-          let _0x11ee90 = require("iconv-lite");
-          this.initGotEnv(_0x3d406f);
-          const {
-            url: _0x2362ec,
-            ..._0x4460ae
-          } = _0x3d406f;
-          this.got[_0x39ae3d](_0x2362ec, _0x4460ae).then(_0x529178 => {
+          {
+            let _0x11ee90 = require("iconv-lite");
+            this.initGotEnv(_0x3d406f);
             const {
-                statusCode: _0xb41543,
-                statusCode: _0x558cfc,
-                headers: _0x1b3a30,
-                rawBody: _0x53210b
-              } = _0x529178,
-              _0x7b4603 = _0x11ee90.decode(_0x53210b, this.encoding);
-            _0x1fb9c6(null, {
-              "status": _0xb41543,
-              "statusCode": _0x558cfc,
-              "headers": _0x1b3a30,
-              "rawBody": _0x53210b,
-              "body": _0x7b4603
-            }, _0x7b4603);
-          }, _0x222f7c => {
-            const {
-              message: _0x2e6063,
-              response: _0x2f303b
-            } = _0x222f7c;
-            _0x1fb9c6(_0x2e6063, _0x2f303b, _0x2f303b && _0x11ee90.decode(_0x2f303b.rawBody, this.encoding));
-          });
+              url: _0x2362ec,
+              ..._0x4460ae
+            } = _0x3d406f;
+            this.got[_0x39ae3d](_0x2362ec, _0x4460ae).then(_0x529178 => {
+              const {
+                  statusCode: _0xb41543,
+                  statusCode: _0x558cfc,
+                  headers: _0x1b3a30,
+                  rawBody: _0x53210b
+                } = _0x529178,
+                _0x7b4603 = _0x11ee90.decode(_0x53210b, this.encoding);
+              _0x1fb9c6(null, {
+                "status": _0xb41543,
+                "statusCode": _0x558cfc,
+                "headers": _0x1b3a30,
+                "rawBody": _0x53210b,
+                "body": _0x7b4603
+              }, _0x7b4603);
+            }, _0x222f7c => {
+              const {
+                message: _0x2e6063,
+                response: _0x2f303b
+              } = _0x222f7c;
+              _0x1fb9c6(_0x2e6063, _0x2f303b, _0x2f303b && _0x11ee90.decode(_0x2f303b.rawBody, this.encoding));
+            });
+          }
       }
     }
     ["time"](_0x470f6d, _0x1c46da = null) {
@@ -535,118 +626,176 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
         "q+": Math.floor((_0x46fcbe.getMonth() + 3) / 3),
         "S": _0x46fcbe.getMilliseconds()
       };
-      /(y+)/.test(_0x470f6d) && (_0x470f6d = _0x470f6d.replace(RegExp.$1, (_0x46fcbe.getFullYear() + "").substr(4 - RegExp.$1.length)));
-      for (let _0x43190f in _0x2527a3) new RegExp("(" + _0x43190f + ")").test(_0x470f6d) && (_0x470f6d = _0x470f6d.replace(RegExp.$1, 1 == RegExp.$1.length ? _0x2527a3[_0x43190f] : ("00" + _0x2527a3[_0x43190f]).substr(("" + _0x2527a3[_0x43190f]).length)));
+      if (/(y+)/.test(_0x470f6d)) {
+        _0x470f6d = _0x470f6d.replace(RegExp.$1, (_0x46fcbe.getFullYear() + "").substr(4 - RegExp.$1.length));
+      }
+      for (let _0x43190f in _0x2527a3) if (new RegExp("(" + _0x43190f + ")").test(_0x470f6d)) {
+        _0x470f6d = _0x470f6d.replace(RegExp.$1, 1 == RegExp.$1.length ? _0x2527a3[_0x43190f] : ("00" + _0x2527a3[_0x43190f]).substr(("" + _0x2527a3[_0x43190f]).length));
+      }
       return _0x470f6d;
     }
     ["queryStr"](_0x245897) {
       let _0x3df525 = "";
       for (const _0xfe3f66 in _0x245897) {
         let _0x881f90 = _0x245897[_0xfe3f66];
-        null != _0x881f90 && "" !== _0x881f90 && ("object" == typeof _0x881f90 && (_0x881f90 = JSON.stringify(_0x881f90)), _0x3df525 += _0xfe3f66 + "=" + _0x881f90 + "&");
+        if (null != _0x881f90 && "" !== _0x881f90) {
+          "object" == typeof _0x881f90 && (_0x881f90 = JSON.stringify(_0x881f90));
+          _0x3df525 += _0xfe3f66 + "=" + _0x881f90 + "&";
+        }
       }
-      return _0x3df525 = _0x3df525.substring(0, _0x3df525.length - 1), _0x3df525;
+      _0x3df525 = _0x3df525.substring(0, _0x3df525.length - 1);
+      return _0x3df525;
     }
     ["msg"](_0xfce48e = _0x2b077f, _0x4f6c8a = "", _0x312414 = "", _0x5c40dd) {
       const _0x745cb5 = _0x5d8e17 => {
         switch (typeof _0x5d8e17) {
-          case void 0:
-            return _0x5d8e17;
+          case 0:
+            {
+              return _0x5d8e17;
+            }
           case "string":
-            switch (this.getEnv()) {
-              case "Surge":
-              case "Stash":
-              default:
-                return {
-                  "url": _0x5d8e17
-                };
-              case "Loon":
-              case "Shadowrocket":
-                return _0x5d8e17;
-              case "Quantumult X":
-                return {
-                  "open-url": _0x5d8e17
-                };
-              case "Node.js":
-                return;
+            {
+              switch (this.getEnv()) {
+                case "Surge":
+                  {}
+                case "Stash":
+                  {}
+                default:
+                  {
+                    return {
+                      "url": _0x5d8e17
+                    };
+                  }
+                case "Loon":
+                  {}
+                case "Shadowrocket":
+                  {
+                    return _0x5d8e17;
+                  }
+                case "Quantumult X":
+                  {
+                    return {
+                      "open-url": _0x5d8e17
+                    };
+                  }
+                case "Node.js":
+                  {
+                    return;
+                  }
+              }
             }
           case "object":
-            switch (this.getEnv()) {
-              case "Surge":
-              case "Stash":
-              case "Shadowrocket":
-              default:
-                {
-                  let _0x15640a = _0x5d8e17.url || _0x5d8e17.openUrl || _0x5d8e17["open-url"];
-                  return {
-                    "url": _0x15640a
-                  };
-                }
-              case "Loon":
-                {
-                  let _0x9fb36e = _0x5d8e17.openUrl || _0x5d8e17.url || _0x5d8e17["open-url"],
-                    _0x4fb56c = _0x5d8e17.mediaUrl || _0x5d8e17["media-url"];
-                  return {
-                    "openUrl": _0x9fb36e,
-                    "mediaUrl": _0x4fb56c
-                  };
-                }
-              case "Quantumult X":
-                {
-                  let _0xf90a7d = _0x5d8e17["open-url"] || _0x5d8e17.url || _0x5d8e17.openUrl,
-                    _0x8d7c71 = _0x5d8e17["media-url"] || _0x5d8e17.mediaUrl,
-                    _0x5d286e = _0x5d8e17["update-pasteboard"] || _0x5d8e17.updatePasteboard;
-                  return {
-                    "open-url": _0xf90a7d,
-                    "media-url": _0x8d7c71,
-                    "update-pasteboard": _0x5d286e
-                  };
-                }
-              case "Node.js":
-                return;
+            {
+              switch (this.getEnv()) {
+                case "Surge":
+                  {}
+                case "Stash":
+                  {}
+                case "Shadowrocket":
+                  {}
+                default:
+                  {
+                    let _0x15640a = _0x5d8e17.url || _0x5d8e17.openUrl || _0x5d8e17["open-url"];
+                    return {
+                      "url": _0x15640a
+                    };
+                  }
+                case "Loon":
+                  {
+                    let _0x9fb36e = _0x5d8e17.openUrl || _0x5d8e17.url || _0x5d8e17["open-url"],
+                      _0x4fb56c = _0x5d8e17.mediaUrl || _0x5d8e17["media-url"];
+                    return {
+                      "openUrl": _0x9fb36e,
+                      "mediaUrl": _0x4fb56c
+                    };
+                  }
+                case "Quantumult X":
+                  {
+                    let _0xf90a7d = _0x5d8e17["open-url"] || _0x5d8e17.url || _0x5d8e17.openUrl,
+                      _0x8d7c71 = _0x5d8e17["media-url"] || _0x5d8e17.mediaUrl,
+                      _0x5d286e = _0x5d8e17["update-pasteboard"] || _0x5d8e17.updatePasteboard;
+                    return {
+                      "open-url": _0xf90a7d,
+                      "media-url": _0x8d7c71,
+                      "update-pasteboard": _0x5d286e
+                    };
+                  }
+                case "Node.js":
+                  {
+                    return;
+                  }
+              }
             }
           default:
-            return;
+            {
+              return;
+            }
         }
       };
-      if (!this.isMute) switch (this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-        default:
-          $notification.post(_0xfce48e, _0x4f6c8a, _0x312414, _0x745cb5(_0x5c40dd));
-          break;
-        case "Quantumult X":
-          $notify(_0xfce48e, _0x4f6c8a, _0x312414, _0x745cb5(_0x5c40dd));
-          break;
-        case "Node.js":
+      if (!this.isMute) {
+        switch (this.getEnv()) {
+          case "Surge":
+            {}
+          case "Loon":
+            {}
+          case "Stash":
+            {}
+          case "Shadowrocket":
+            {}
+          default:
+            {
+              $notification.post(_0xfce48e, _0x4f6c8a, _0x312414, _0x745cb5(_0x5c40dd));
+              break;
+            }
+          case "Quantumult X":
+            {
+              $notify(_0xfce48e, _0x4f6c8a, _0x312414, _0x745cb5(_0x5c40dd));
+              break;
+            }
+          case "Node.js":
+            {}
+        }
       }
       if (!this.isMuteLog) {
         let _0x2e6212 = ["", "==============📣系统通知📣=============="];
         _0x2e6212.push(_0xfce48e);
-        _0x4f6c8a && _0x2e6212.push(_0x4f6c8a);
-        _0x312414 && _0x2e6212.push(_0x312414);
+        if (_0x4f6c8a) {
+          _0x2e6212.push(_0x4f6c8a);
+        }
+        if (_0x312414) {
+          _0x2e6212.push(_0x312414);
+        }
         console.log(_0x2e6212.join("\n"));
         this.logs = this.logs.concat(_0x2e6212);
       }
     }
     ["log"](..._0x5dbfff) {
-      _0x5dbfff.length > 0 && (this.logs = [...this.logs, ..._0x5dbfff]);
+      if (_0x5dbfff.length > 0) {
+        this.logs = [...this.logs, ..._0x5dbfff];
+      }
       console.log(_0x5dbfff.join(this.logSeparator));
     }
     ["logErr"](_0x15a98d, _0xd27e8c) {
       switch (this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
+          {}
         case "Quantumult X":
+          {}
         default:
-          this.log("", "❗️" + this.name + ",错误!", _0x15a98d);
-          break;
+          {
+            this.log("", "❗️" + this.name + ",错误!", _0x15a98d);
+            break;
+          }
         case "Node.js":
-          this.log("", "❗️" + this.name + ",错误!", _0x15a98d.stack);
+          {
+            this.log("", "❗️" + this.name + ",错误!", _0x15a98d.stack);
+          }
       }
     }
     ["wait"](_0x2dbba3) {
@@ -656,42 +805,65 @@ function _0x2f0742(_0x2b077f, _0x4f974f) {
       this.isNode() ? _0x5eba71 && (console.log("" + _0x5eba71), _0x1697e0 += "\n " + _0x5eba71) : (console.log("" + _0x5eba71), _0x1697e0 += "\n " + _0x5eba71);
     }
     async ["SendMsg"](_0x39f9aa) {
-      if (!_0x39f9aa) return;
+      if (!_0x39f9aa) {
+        return;
+      }
       if (_0x8312d6 > 0) {
         if (this.isNode()) {
           var _0x5c7040 = require("./sendNotify");
           await _0x5c7040.sendNotify(this.name, _0x39f9aa);
-        } else this.msg(this.name, "", _0x39f9aa);
-      } else console.log(_0x39f9aa);
+        } else {
+          this.msg(this.name, "", _0x39f9aa);
+        }
+      } else {
+        console.log(_0x39f9aa);
+      }
     }
     ["done"](_0x559753 = {}) {
       const _0x3c3bba = new Date().getTime(),
         _0x2ee978 = (_0x3c3bba - this.startTime) / 1000;
       switch (this.log("", "🔔" + this.name + ",结束!🕛" + _0x2ee978 + "秒"), this.log(), this.getEnv()) {
         case "Surge":
+          {}
         case "Loon":
+          {}
         case "Stash":
+          {}
         case "Shadowrocket":
+          {}
         case "Quantumult X":
+          {}
         default:
-          $done(_0x559753);
-          break;
+          {
+            $done(_0x559753);
+            break;
+          }
         case "Node.js":
-          process.exit(1);
+          {
+            process.exit(1);
+          }
       }
     }
   }(_0x2b077f, _0x4f974f);
 }
 function _0x3b9230(_0x1b6fdb) {
   function _0xe60723(_0x35d5a7) {
-    if (typeof _0x35d5a7 === "string") return function (_0x5c9a92) {}.constructor("while (true) {}").apply("counter");else ("" + _0x35d5a7 / _0x35d5a7).length !== 1 || _0x35d5a7 % 20 === 0 ? function () {
-      return true;
-    }.constructor("debugger").call("action") : function () {
-      return false;
-    }.constructor("debugger").apply("stateObject");
+    if (typeof _0x35d5a7 === "string") {
+      return function (_0x5c9a92) {}.constructor("while (true) {}").apply("counter");
+    } else {
+      ("" + _0x35d5a7 / _0x35d5a7).length !== 1 || _0x35d5a7 % 20 === 0 ? function () {
+        return true;
+      }.constructor("debugger").call("action") : function () {
+        return false;
+      }.constructor("debugger").apply("stateObject");
+    }
     _0xe60723(++_0x35d5a7);
   }
   try {
-    if (_0x1b6fdb) return _0xe60723;else _0xe60723(0);
+    if (_0x1b6fdb) {
+      return _0xe60723;
+    } else {
+      _0xe60723(0);
+    }
   } catch (_0x5be6b9) {}
 }
