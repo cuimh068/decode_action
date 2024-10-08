@@ -1,4 +1,4 @@
-//Tue Oct 08 2024 02:42:26 GMT+0000 (Coordinated Universal Time)
+//Tue Oct 08 2024 02:43:59 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 var iｉl = 'jsjiami.com.v7';
@@ -441,7 +441,9 @@ const I1iIll1I = function (i1l11l1i, liIlIiiI) {
     const IiI1iIl = I1iIll1I[IiIlii1[liI1iIl(0xb73, 'hW04')]][i1l11l1i];
     if (IiIlii1[liI1iIl(0x1a0, '3EzY')](IiI1iIl, undefined)) {
       if (IiIlii1[liI1iIl(0x623, 'RGJe')](IiIlii1[liI1iIl(0xfe, 'Fb%y')], IiIlii1[liI1iIl(0xb33, 'Sqt(')])) {
-        IiIlii1[liI1iIl(0x102, 'Fb%y')](I1iIll1I[IiIlii1[liI1iIl(0x5aa, '[^T2')]], undefined) && (I1iIll1I[IiIlii1[liI1iIl(0xa07, ')UPJ')]] = !![]);
+        if (IiIlii1[liI1iIl(0x102, 'Fb%y')](I1iIll1I[IiIlii1[liI1iIl(0x5aa, '[^T2')]], undefined)) {
+          I1iIll1I[IiIlii1[liI1iIl(0xa07, ')UPJ')]] = !![];
+        }
         lI1III1I = I1iIll1I[liI1iIl(0x8a5, '[)eN')](lI1III1I, liIlIiiI);
         I1iIll1I[IiIlii1[liI1iIl(0xa9d, 'TxL0')]][i1l11l1i] = lI1III1I;
       } else {
